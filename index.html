@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um blog pessoal para compartilhar imagens e ideias.">
+  <title>Meu Blog Azul</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="logo" href="#inicio">Meu Blog Azul</a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#novo-post">Novo post</a>
+      <a href="#publicacoes">Publicações</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="apresentacao">
+      <p class="destaque">Um espaço para compartilhar</p>
+      <h1>Olá, este é o meu cantinho!</h1>
+      <p>Publique suas imagens, conte um pouco sobre elas e converse com quem passar por aqui.</p>
+    </section>
+
+    <section class="cartao formulario-cartao" id="novo-post">
+      <h2>Compartilhe uma imagem</h2>
+      <form id="form-post">
+        <label for="titulo-post">Título</label>
+        <input id="titulo-post" name="titulo" type="text" placeholder="Dê um título para a publicação" required>
+
+        <label for="imagem-post">Escolha uma imagem</label>
+        <input id="imagem-post" name="imagem" type="file" accept="image/*" required>
+
+        <label for="texto-post">Legenda</label>
+        <textarea id="texto-post" name="texto" rows="3" placeholder="Escreva algo sobre esta imagem..." required></textarea>
+
+        <button class="botao" type="submit">Publicar imagem</button>
+        <p class="mensagem" id="mensagem-post" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="publicacoes" id="publicacoes">
+      <h2>Publicações</h2>
+      <p class="aviso-vazio" id="aviso-vazio">Ainda não há publicações. Que tal compartilhar a primeira?</p>
+      <div id="lista-posts"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com carinho, azul e branco.</p>
+  </footer>
+</body>
+</html>
